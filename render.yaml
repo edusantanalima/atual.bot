@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: bot-backend
+    env: node
+    plan: free
+    buildCommand: 'npm install'
+    startCommand: 'node index.js'
+    envVars:
+      - key: NODE_VERSION
+        value: 18.17.1
+      - key: DISCORD_TOKEN
+        fromSecret: true
+      - key: CLIENT_ID
+        fromSecret: true
+      - key: GUILD_ID
+        fromSecret: true
