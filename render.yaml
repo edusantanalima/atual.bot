@@ -1,7 +1,8 @@
 services:
   - type: web
-    name: bot-backend
+    name: bot-backend-postador
     env: node
+    region: ohio
     plan: free
     buildCommand: 'npm install'
     startCommand: 'node index.js'
